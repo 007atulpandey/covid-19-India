@@ -2,37 +2,88 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+nav{
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+  min-height: 10vh;
+  background-color: grey;
+  color:white;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+}
+.line{
+  min-width:20px;
+  min-height: 4px;
+  background-color: white;
+  margin-bottom: 2px;
+
+}
+.action{
+  display: none;
+  transition: 2s ease-in-out;
+}
+.link{
+  text-decoration:none;
+  color:white;
+}
+.nav-links{
+  width: 40%;
+  justify-content: space-around;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style: none;
+  align-content: center;
+  
 }
 
-.App-link {
-  color: #61dafb;
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+.hidden{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .action{
+    display: inline;
   }
 }
